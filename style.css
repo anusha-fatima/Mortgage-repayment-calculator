@@ -1,0 +1,418 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans";
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: hsl(202, 86%, 94%);
+  min-height: 100vh;
+}
+
+.main {
+  background-color: hsl(0, 0%, 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  overflow: hidden;
+  border-radius: 1.15rem;
+}
+
+.main>* {
+  padding: 2rem;
+}
+
+.main .left {
+  color: hsl(202, 55%, 16%);
+}
+
+.main .left .head {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head h2 {
+  color: hsl(202, 55%, 16%);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.main .left .head button {
+  border: none;
+  background: transparent;
+  padding: .25rem .5rem;
+  color: hsl(200, 26%, 54%);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.main .left .head button:hover {
+  color: hsl(202, 55%, 16%);
+}
+
+h3 {
+  color: hsl(200, 26%, 54%);
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding-top: 1rem;
+}
+
+.mortgage_amount_main span {
+  color: hsl(202, 55%, 16%);
+  padding: .5rem 1rem;
+  gap: .5rem;
+  font-weight: 700;
+  background: hsl(202, 86%, 94%);
+  border: 1px solid hsl(200, 26%, 54%);
+}
+
+.mortgage_amount_main input {
+  color: hsl(202, 55%, 16%);
+  border: 1px solid hsl(200, 26%, 54%);
+  border-left: none;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.mortgage_amount_main:hover {
+  border: 1px solid hsl(200, 26%, 54%);
+  border-radius: .5rem;
+}
+
+.mortgage_amount_main input:focus-within {
+  border: 1px solid hsl(61, 70%, 52%);
+  border-radius: .5rem;
+}
+
+.mortgage_amount_main:focus-within span {
+  background-color: hsl(61, 70%, 52%);
+  border: 1px solid hsl(61, 70%, 52%);
+}
+
+.mortgage_amount_main input:focus {
+  outline: none;
+  box-shadow: none
+}
+
+.mortgage_amount_main.error input {
+  border: 1px solid hsl(4, 69%, 50%);
+  border-radius: .5rem;
+
+}
+
+.mortgage_amount_main.error span {
+  background-color: hsl(4, 69%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+
+.mid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mid {
+  margin: .3rem;
+}
+
+.mid h3 {
+  font-size: 1rem;
+}
+
+.Years {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.form_flex {
+  margin: .3rem;
+
+}
+
+.form_flex input {
+  color: hsl(200, 24%, 40%);
+  font-weight: 500;
+  border: 1px solid hsl(200, 26%, 54%);
+  border-right: none;
+  border-radius: .5rem;
+}
+
+.form_flex span {
+  color: hsl(200, 24%, 40%);
+  font-weight: 700;
+  width: 3rem;
+  background: hsl(202, 86%, 94%);
+  border: 1px solid hsl(200, 26%, 54%);
+  border-radius: .5rem;
+}
+
+.form_flex input:focus {
+  outline: none;
+  box-shadow: none
+}
+
+.form_flex:hover {
+  border: 1px solid hsl(200, 26%, 54%);
+  border-radius: .5rem;
+}
+
+.form_flex:focus-within input{
+  border: 1px solid hsl(61, 70%, 52%);
+  border-radius: .5rem;
+}
+
+.form_flex:focus-within span {
+  background-color: hsl(61, 70%, 52%);
+  border: 1px solid hsl(61, 70%, 52%);
+}
+.form_flex.error:hover{
+  border: 1px solid white;
+
+}
+
+.form_flex.error span {
+  background-color: hsl(4, 69%, 50%);
+  color: hsl(0, 0%, 100%);
+}
+
+.lasthead h3 {
+  font-size: 1rem;
+}
+
+.one {
+  margin-bottom: 1rem;
+}
+
+.input-group-text {
+  padding: 0;
+}
+
+.radio_inputs {
+  cursor: pointer;
+  border: 1px solid hsl(203, 41%, 72%);
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  gap: .5rem;
+  width: 25rem;
+}
+
+.radio_inputs input[type='radio'] {
+  appearance: none;
+  cursor: pointer;
+  outline: 2px solid hsl(203, 41%, 72%);
+  outline-offset: 3px;
+  accent-color: hsl(61, 70%, 52%);
+  margin-right: .5rem;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 5rem;
+}
+
+.radio_inputs input[type='radio']:checked {
+  background-color: hsl(61, 70%, 52%);
+}
+
+.radio_inputs>* {
+  cursor: pointer;
+}
+
+.radio_inputs:hover {
+  border: 1px solid hsl(61, 70%, 52%);
+}
+
+.radio_inputs label {
+  margin-bottom: 0;
+}
+
+.radio_inputs.selected {
+  background-color: hsla(61, 70%, 52%, 0.473);
+  border: 1px solid hsl(61, 70%, 52%);
+}
+
+.radio_inputs.selected input[type='radio'] {
+  outline: 3px solid hsl(61, 70%, 52%);
+}
+
+.calculate_btn {
+  background-color: hsl(61, 70%, 52%);
+  border-radius: 2rem;
+  border: none;
+  width: 15rem;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: .5rem;
+  outline: none;
+}
+
+.calculate_btn .fa {
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.calculate_btn:hover {
+  background-color: hsla(61, 70%, 52%, 0.76);
+}
+
+.form_alert {
+  display: none;
+  color: hsl(4, 69%, 50%);
+}
+
+.form_flex.error input:invalid {
+  border: 1px solid hsl(4, 69%, 50%);
+}
+
+.form_alert {
+  border: none;
+  margin-top: 5px;
+  color: hsl(4, 69%, 50%);
+  font-size: 1rem;
+  display: block;
+  pointer-events: none;
+}
+
+#term_alert {
+  color: hsl(4, 69%, 50%);
+}
+
+
+.main .right {
+  background-color: hsl(202, 55%, 16%);
+  color: white;
+  border-radius: 0 0 0 4rem;
+}
+
+.main .right .default_text {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.main .right .default_text img {
+  margin: auto;
+}
+
+.main .right .default_text p {
+  color: hsl(203, 41%, 72%);
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.main .right .default_text.hide {
+  display: none;
+}
+
+.main .right .calculations_container {
+  display: none;
+}
+
+.main .right .calculations_container.show {
+  display: block;
+}
+
+.completeResult h4 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.completeResult p {
+  color: hsl(203, 41%, 72%);
+  margin-top: 1rem;
+}
+
+.resultbox {
+  background-color: hsl(200, 60%, 8%);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top: 4px solid hsl(61, 70%, 52%);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.calculations h6 {
+  color: hsl(203, 41%, 72%);
+}
+
+.monthly-result {
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(61, 70%, 52%);
+
+}
+
+.line {
+  border-bottom: 2px solid grey;
+}
+
+.term p {
+  padding-top: 0.15rem;
+  color: hsl(203, 41%, 72%);
+}
+
+.term-monthly {
+  font-size: 2rem;
+  font-weight: 500;
+  color: hsl(61, 70%, 52%);
+}
+
+@media (max-width: 800px) {
+  .main{
+    margin: 2rem;
+    grid-template-columns: 1fr;
+  }
+  .main .right .default_text{
+    margin-top: 3rem;
+  }
+}
+ @media (max-width: 540px) {
+  .main{
+    margin:0;   
+    grid-template-columns: 1fr;
+    border-radius: initial;
+  }
+  
+  .main .left  .head{
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .main .right{
+    border-radius: initial;
+  }
+  .main .left .calculate_btn{
+    width: 10rem;
+    justify-content: center;
+  }
+ }
+ @media (max-width: 375) {
+  .main{
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 1.15rem;
+  }
+ }

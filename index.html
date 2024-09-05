@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="left">
+      <div class="head">
+        <h2>Mortgage Calculator</h2>
+        <button id="clear_btn">ClearAll</button>
+      </div>
+      <form id="mortgage_form">
+        <h3>Mortgage Amount</h3>
+        <div id="mortgage_amount_main" class="mortgage_amount_main">
+          <div class="input-group flex-nowrap" id="form-flex">
+            <span class="input-group-text" >€</span>
+            <input id="mortgage_amount" type="number" name="mortgage_amount" class="form-control" aria-describedby="addon-wrapping" required>
+          </div>
+        </div>
+        <p class="form_alert" id="amount_alert">This field is required</p>
+
+
+        <div class="mid">
+          <h3>Mortgage Term</h3>
+          <h3>Interest Rate</h3>
+        </div>
+
+        <div class="Years">
+          <div class="form_flex">
+            <div class="input-group">
+              <input id="mortgage_term" name="mortgage_term" type="number" class="form-control" step="0.01" required>
+              <span class="input-group-text">Years</span>
+            </div>
+            <p class="form_alert" id="term_alert">This field is required</p>
+          </div>
+          <div class="form_flex" id="interest_rate_main">
+            <div class="input-group">
+              <input id="interest_rate" name="interest_rate" type="number" class="form-control" step="0.01" required>
+              <span class="input-group-text">%</span>
+            </div>
+            <p id="rate_alert" class="form_alert">This field is required</p>
+          </div>
+        </div>
+
+
+        <h3 class="lasthead">Mortgage Type</h3>
+
+        <div class="one">
+          <div class="input-group">
+            <div class="input-group-text">
+              <div class="radio_inputs">
+                <input class="mortgage_type" id="repayment" name="mortgage_type" type="radio" value="repayment"
+                  required>
+                <label for="repayment" class="textone ">Repayments</label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="one">
+          <div class="input-group">
+            <div class="input-group-text">
+              <div class="radio_inputs">
+                <input class="mortgage_type" id="interest_only" type="radio" name="mortgage_type" value="interest_only"
+                  step="0.01" required>
+                <label for="interest_only" class="texttwo ">Interest Only</label>
+              </div>
+            </div>
+          </div>
+          <p id="type_alert" class="form_alert">This field is required</p>
+        </div>
+        <button id="calculate_btn" class="calculate_btn" type="button"><i class="fa fa-calculator"></i>Calculate
+          Repayments</button>
+      </form>
+    </div>
+
+    <!-- Empty results start -->
+    <div class="right">
+      <div id="default_text" class="default_text">
+        <img src="./assets/images/illustration-empty.svg" alt="">
+        <h4>Results shown here</h4>
+        <p>Complete the form and click “calculate repayments” to
+          see what your monthly repayments would be. </p>
+      </div>
+      <!-- Empty results end -->
+
+      <!-- Completed results start -->
+      <div class="completeResult">
+        <div id="calculations_container" class="calculations_container">
+          <h4>Your results</h4>
+          <p>Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate repayments” again.</p>
+
+          <div class="resultbox">
+            <div class="calculations">
+              <h6>Your monthly repayments</h6>
+              <span id="result" class="monthly-result"></span>
+              <p class="line"></p>
+              <div class="term">
+                <p>Total you'll repay over the term</p>
+                <span id="term_result" class="term-monthly"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
